@@ -21,6 +21,11 @@ def format_header():
         print("The level should be within the range of 1 to 6.")
         return ""
 
+def format_link():
+        label = input("Label: > ")
+        url = input("URL: > ")
+        return f"[{label}]({url})"
+
 
 def print_help():
     print("Available formatters: plain bold italic header link inline-code ordered-list unordered-list new-line")
