@@ -26,6 +26,21 @@ def format_link():
         url = input("URL: > ")
         return f"[{label}]({url})"
 
+def format_list(ordered=True):
+    num_rows = int(input("Number of rows: > "))
+    if num_rows <= 0:
+        print("The number of rows should be greater than zero")
+        return ""
+
+    result = []
+    for i in range(1, num_rows + 1):
+        row_text = input(f"Row #{i}: > ")
+        prefix = f"{i}. " if ordered else "* "
+        result.append(prefix + row_text)
+
+    return "\n".join(result) + "\n"
+
+
 
 def print_help():
     print("Available formatters: plain bold italic header link inline-code ordered-list unordered-list new-line")
