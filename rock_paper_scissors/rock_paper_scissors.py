@@ -1,20 +1,34 @@
 import random
 
+def get_win_map(options):
+    win_map = {}
+    length = len(options)
+    for idx, item in enumerate(options):
+        defeats = options[idx+1:] + options[:idx]
+        half = len(defeats) // 2
+        win_map[item] = defeats[:half]
+    return win_map
+
 name = input("Enter your name: ")
 print(f"Hello, {name}")
 
-# Читаємо рейтинг
+# Отримуємо рейтинг
 score = 0
 try:
     with open("rating.txt", "r") as f:
         for line in f:
-            username, user_score = line.strip().split()
+            username, points = line.strip().split()
             if username == name:
-                score = int(user_score)
+                score = int(points)
 except FileNotFoundError:
     pass
 
-options = ["rock", "paper", "scissors"]
+# Отримуємо опції гри
+options_input = input()
+options = options_input.split(",") if options_input else ["rock", "paper", "scissors"]
+print("Okay, let's start")
+
+win_map = get_win_map(options)
 
 while True:
     user_input = input()
@@ -33,9 +47,7 @@ while True:
     if user_input == computer_choice:
         score += 50
         print(f"There is a draw ({computer_choice})")
-    elif (user_input == "rock" and computer_choice == "scissors") or \
-         (user_input == "scissors" and computer_choice == "paper") or \
-         (user_input == "paper" and computer_choice == "rock"):
+    elif computer_choice in win_map[user_input]:
         score += 100
         print(f"Well done. The computer chose {computer_choice} and failed")
     else:
