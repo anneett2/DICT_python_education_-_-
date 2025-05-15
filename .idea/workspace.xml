@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c84beb3e-f68f-44d1-8456-ac3f116942e2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Credit_calculator/Credit_calculator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Credit_calculator/Credit_calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Credit_calculator/Credit_calculator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,20 +16,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2x8DtGpDA2lfrk7vGtl72Ng8A5b" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Credit_calculator.executor": "Debug",
-    "git-widget-placeholder": "feature/credit__calculator"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Credit_calculator.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/credit__calculator&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Credit_calculator" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="DICT_python_education_-_-" />
@@ -63,6 +65,13 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c84beb3e-f68f-44d1-8456-ac3f116942e2" name="Changes" comment="" />
+      <created>1747313578733</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747313578733</updated>
+    </task>
     <servers />
   </component>
 </project>
