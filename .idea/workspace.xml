@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c84beb3e-f68f-44d1-8456-ac3f116942e2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/web_page_scraper/ __init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_page_scraper/Page_1/Article1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_page_scraper/Page_1/Article2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_page_scraper/saved_articles" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_page_scraper/web_page_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page_scraper/web_page_scraper.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
