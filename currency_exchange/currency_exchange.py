@@ -1,31 +1,30 @@
 import requests
 
-currency_code = input("Enter your currency code (e.g. AUD): ").lower()
-url = f"http://www.floatrates.com/daily/{currency_code}.json"
+base_currency = input("Enter your base currency code: ").lower()
+url = f"http://www.floatrates.com/daily/{base_currency}.json"
 response = requests.get(url)
+rates = response.json()
 
-if response.status_code != 200:
-    print("Error: Unable to get data. Please check your currency code.")
-else:
-    try:
-        data = response.json()
-        usd_rate = None
-        eur_rate = None
+cache = {}
+# Автоматичне додавання USD та EUR у кеш
+for key in ['usd', 'eur']:
+    if key in rates:
+        cache[key] = rates[key]
 
-        if currency_code != 'usd':
-            usd_rate = data.get('usd', {}).get('rate')
-        if currency_code != 'eur':
-            eur_rate = data.get('eur', {}).get('rate')
+while True:
+    target_currency = input("Enter currency to convert to (or press Enter to stop): ").lower()
+    if target_currency == "":
+        break
 
-        if usd_rate:
-            print(f"Exchange rate to USD: {usd_rate}")
-        else:
-            print("Exchange rate to USD is not available (maybe your base currency is USD).")
+    amount = float(input("Enter the amount to exchange: "))
+    print("Checking the cache...")
 
-        if eur_rate:
-            print(f"Exchange rate to EUR: {eur_rate}")
-        else:
-            print("Exchange rate to EUR is not available (maybe your base currency is EUR).")
+    if target_currency in cache:
+        print("It is in the cache!")
+    else:
+        print("Sorry, but it is not in the cache!")
+        cache[target_currency] = rates.get(target_currency)
 
-    except Exception as e:
-        print("Error decoding data. Please try again later.")
+    rate = cache[target_currency]['rate']
+    result = round(amount * rate, 2)
+    print(f"You received {result} {target_currency.upper()}.")
